@@ -1,0 +1,57 @@
+/* ----Section-features------ */
+.main-second {
+  &-section {
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: -94px;
+  }
+
+  &-list {
+    display: flex;
+  }
+  &-item {
+    margin-right: 30px;
+  }
+
+  &-item:last-child {
+    margin-right: 0;
+  }
+  /* Заголовки секции */
+  &-title {
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  /* Текст секции */
+  &-text {
+    line-height: 1.7;
+    color: var(--primary-white-color);
+
+    margin-top: 10px;
+  }
+}
+
+.main-card {
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 25px;
+  }
+
+  &-item {
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: #f5f4fa;
+
+    margin-bottom: 30px;
+  }
+  &-list {
+  }
+  &-item + &-item {
+    margin-left: 30px;
+  }
+}
