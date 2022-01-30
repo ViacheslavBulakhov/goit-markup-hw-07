@@ -21,91 +21,88 @@
   padding-bottom: 94px;
 }
 
-.button-list {
-  display: flex;
-
-  margin-bottom: 50px;
-  justify-content: center;
-}
-/* .button-item {
-  margin-right: 8px;
-
-  border-radius: 4px;
-  overflow: hidden;
-  border: 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
-
 /* ----------------------------Кнопки портфолио------------- */
+.button {
+  &-list {
+    display: flex;
 
-.button-item {
-  font-family: Roboto;
-  font-style: 500;
-  font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.03em;
-  background-color: var(--button-background);
-  cursor: pointer;
-  font-family: inherit;
-  margin-right: 8px;
-  padding: 6px 22px;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 
-  border-radius: 4px;
-  overflow: hidden;
-  border: 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.button-item:hover,
-.button-item:focus {
-  background-color: var(--accent-color);
-  color: var(--white-color);
-  cursor: pointer;
-  font-family: inherit;
+  &-item {
+    font-family: Roboto;
+    font-style: 500;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    background-color: var(--button-background);
+    cursor: pointer;
+    font-family: inherit;
+    margin-right: 8px;
+    padding: 6px 22px;
 
-  box-shadow: 0px 2px rgba(0, 0, 0, 0.12), 0px 1px rgba(0, 0, 0, 0.08), 0px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &-item:hover,
+  &-item:focus {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-family: inherit;
+
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.12), 0px 1px rgba(0, 0, 0, 0.08), 0px 3px rgba(0, 0, 0, 0.1);
+  }
+  &-item:active {
+    color: var(--accent-color);
+  }
 }
-.button-item:active {
-  color: var(--accent-color);
+.main {
+  &-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--size-margin-one));
+    margin-left: calc(-1 * var(--size-margin-one));
+  }
+  &-item {
+    flex-basis: calc(100% / 3 - var(--size-margin-one));
+    margin-left: var(--size-margin-one);
+    margin-top: var(--size-margin-one);
+  }
+}
+.card {
+  &-text {
+    padding: 20px 24px;
+
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: var(--border-card-portfolio);
+
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: var(--border-card-portfolio);
+
+    border-bottom-color: var(--border-card-portfolio);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  &-portfolio {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &-portfolio:hover,
+  &-portfolio:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
-.main-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--size-margin-one));
-  margin-left: calc(-1 * var(--size-margin-one));
-}
-.main-item {
-  flex-basis: calc(100% / 3 - var(--size-margin-one));
-  margin-left: var(--size-margin-one);
-  margin-top: var(--size-margin-one);
-}
-.card-text {
-  padding: 20px 24px;
-
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: var(--border-card-portfolio);
-
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: var(--border-card-portfolio);
-
-  border-bottom-color: var(--border-card-portfolio);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-}
-.card-portfolio {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card-portfolio:hover,
-.card-portfolio:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 /* -------------Text on IMG--------------- */
 .text-img-wrap {
   position: relative;
@@ -125,7 +122,8 @@
   height: 100%;
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.main-item:hover .text-img {
-  transform: translateY(0);
+
+  .main-item:hover & {
+    transform: translateY(0);
+  }
 }

@@ -2,7 +2,7 @@
 .main-second {
   &-section {
     margin: 0 auto;
-    align-items: center;
+
     margin-bottom: -94px;
   }
 
@@ -34,9 +34,8 @@
 
 .main-card {
   &-container {
-    display: flex;
+    @extend %center;
     justify-content: center;
-    align-items: center;
 
     padding-top: 25px;
   }

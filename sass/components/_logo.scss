@@ -11,12 +11,7 @@
     font-size: 26px;
     line-height: 1.19;
   }
-  &-flex {
-    padding: 24px 0 25px 0;
-    margin-right: 93px;
-    display: block;
-    animation: rotateY 3000ms infinite alternate backwards ease-in-out 1000ms;
-  }
+
   /* ----------------------------------------Вторая часть логотипа футера------------------------ */
   &web {
     color: var(--accent-color);
@@ -30,4 +25,11 @@
     font-size: 26px;
     line-height: 1.19;
   }
+}
+
+.header__logo {
+  padding: 24px 0 25px 0;
+  margin-right: 93px;
+  display: block;
+  animation: rotateY 3000ms infinite alternate backwards ease-in-out 1000ms;
 }

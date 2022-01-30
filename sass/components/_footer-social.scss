@@ -25,9 +25,8 @@
   }
 
   &-list {
-    display: flex;
+    @extend %center;
     justify-content: left;
-    align-items: center;
   }
   &-item {
     width: 44px;
@@ -43,9 +42,9 @@
     width: 44px;
     height: 44px;
     background-color: #44454e;
-    display: flex;
+    @extend %center;
     justify-content: center;
-    align-items: center;
+
     border-radius: 50%;
 
     color: #ffffff;
